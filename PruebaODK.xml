@@ -1,0 +1,53 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>PruebaODK</h:title>
+    <model>
+      <instance>
+        <data id="PruebaODK" version="1654485617">
+          <meta>
+            <instanceID/>
+          </meta>
+          <Prueba/>
+          <Datos/>
+          <untitled4/>
+          <Fotos/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="English">
+          <text id="/data/Datos:label">
+            <value>Datos GPS</value>
+          </text>
+          <text id="/data/untitled4:option0">
+            <value></value>
+          </text>
+          <text id="/data/Fotos:label">
+            <value>Fotos </value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+      <submission method="form-data-post" action="https://docs.google.com/spreadsheets/d/1F6O6PnIWwEAWko9vkrrAi3C8nE12N4hpaY1NJldQfOM/edit?usp=sharing"/>
+      <bind nodeset="/data/Prueba" type="string"/>
+      <bind nodeset="/data/Datos" type="geopoint"/>
+      <bind nodeset="/data/untitled4" type="select"/>
+      <bind nodeset="/data/Fotos" type="binary"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/Prueba">
+    </input>
+    <input ref="/data/Datos">
+      <label ref="jr:itext('/data/Datos:label')"/>
+    </input>
+    <select ref="/data/untitled4">
+      <item>
+        <label ref="jr:itext('/data/untitled4:option0')"/>
+        <value>untitled</value>
+      </item>
+    </select>
+    <upload ref="/data/Fotos" mediatype="image/*">
+      <label ref="jr:itext('/data/Fotos:label')"/>
+    </upload>
+  </h:body>
+</h:html>

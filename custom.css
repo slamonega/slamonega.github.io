@@ -1,0 +1,48 @@
+/* Customize container */
+@media (min-width: 992px) {
+  .container {
+    max-width: 940px;
+  }
+}
+
+/* Add space above and below h2 headers */
+h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/* Style for jumbotron minis */
+.mini {
+  margin-top: 40px;
+}
+
+/* Colors for jumbotrons
+.jumbotron {
+	color: #fff;
+  background-color: #949494;
+}
+*/
+
+/* Style for icons */
+i {
+	color: #949494;
+}
+
+/* Style for icon that are links */
+a:hover i {
+	color: #333;
+}
+
+/* Color for link text */
+a {
+  color: #999;
+  text-decoration: underline;
+}
+a:hover,
+a:focus {
+  color: #333;
+}
+/* Indent for expertise descriptions */
+.expertise {
+  padding-left: 57px;
+}
